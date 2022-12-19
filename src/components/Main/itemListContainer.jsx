@@ -1,6 +1,6 @@
 import "./styles/itemListContainer.css";
 
-function itemContainerList() {
+const BasicExample = () => {
     return (
         <main className="mainPage">
             Comming soon!
@@ -8,4 +8,4 @@ function itemContainerList() {
     );
 }
 
-export default itemContainerList;
+export default BasicExample;

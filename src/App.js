@@ -1,42 +1,13 @@
-function Header({ numberOfProducts }) {
-  return (
-    <header> This is my header number of products {numberOfProducts}</header>
-  );
-}
-
-function Product({ product }) {
-  return (
-    <div key={product.id}>
-      {product.name}
-      {product.price}
-    </div>
-  );
-}
-
-function Store() {
-  const products = [
-    {
-      id: 1,
-      name: "Mani",
-      price: "$1US"
-    }
-  ];
-  return (
-    <main>
-      {products.map((product) => (
-        <Product product={product} />
-      ))}
-    </main>
-  );
-}
+import React from 'react';
+import NavBar from './components/Header/NavBar.jsx';
+import BasicExample from './components/Main/itemListContainer.jsx';
+import './index.css';
 
 export default function App() {
-  const numberOfProducts = 0;
   return (
-    <div className="App">
-      <Header numberOfProducts={numberOfProducts}></Header>
-      <h1>Hello CodeSandbox {numberOfProducts}</h1>
-      <Store />
+    <div>
+      <NavBar />
+      <BasicExample/>
     </div>
   );
 }

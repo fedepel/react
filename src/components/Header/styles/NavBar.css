@@ -45,6 +45,7 @@ nav {
     height: calc(100vh - 128px);
     background-color: black;
     transition: left 0.5s;
+    z-index: 2;
 }
 
 nav.expanded {

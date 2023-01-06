@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Contador = ({ stock }) => {
+const Counter = ({ stock }) => {
     const [cantidad, setCantidad] = useState(1);
 
     const sumar = () => {
@@ -18,15 +19,17 @@ const Contador = ({ stock }) => {
     return (
         <div className="container-counter">
             <div className="counter">
-                <button onClick={restar}>-</button>
+                <button className="btnQ" onClick={restar}>-</button>
                 <p>{cantidad}</p>
-                <button disabled={cantidad === stock} onClick={sumar}>
+                <button className="btnQ" disabled={cantidad === stock} onClick={sumar}>
                     +
                 </button>
             </div>
-            <button className="add-to-cart">Agregar al carrito</button>
+            <Link className="btnDetail" to={``}>
+                    Add to cart
+                </Link>
         </div>
     );
 };
 
-export default Contador;
+export default Counter;

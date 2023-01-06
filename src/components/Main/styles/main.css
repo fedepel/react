@@ -7,3 +7,21 @@ body {
         font-size: 5rem;
     }
 }
+
+.mainContainer {
+    width: 90%;
+    margin: 20px auto 20px auto;
+}
+
+.mainTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    color: white;
+    background-color: #9FA6A5;
+    border-radius: 0 0 50% 50%;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-size: 1em;
+}

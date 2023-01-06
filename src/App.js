@@ -6,6 +6,7 @@ import Cart from './components/Main/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './components/Main/styles/item.css'
+import './components/Main/styles/itemDetails.css'
 
 export default function App() {
   return (

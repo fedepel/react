@@ -1,13 +1,9 @@
-import { data } from "../assets/data/data.js";
 import Item from "../Main/item.jsx";
 
-function ItemList() {
-
-    const products = data;
-
+function ItemList({items}) {
     return (
         <main className="container">
-            {products.map((product) => (
+            {items.map((product) => (
                 <Item product={product} key={product.id}/>
             ))}
         </main>

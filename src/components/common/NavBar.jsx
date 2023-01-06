@@ -1,9 +1,10 @@
 import CartWidget from "./CartWidget";
+import logo from "../assets/images/logoNWorld.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-
-import "./styles/NavBar.css";
+import { NavLink, Link } from 'react-router-dom';
+import "./styles/common.css";
 
 const NavBar = () => {
 
@@ -14,34 +15,34 @@ const NavBar = () => {
       <div className="header-container">
 
         <div className="menu-button">
-          <FontAwesomeIcon icon={faBars} size="lg" color="white" onClick = {() => {
+          <FontAwesomeIcon icon={faBars} size="lg" color="black" onClick = {() => {
           setIsNavExpanded(!isNavExpanded);
         }}/>
           <span>Menu</span>
         </div>
 
         <div className="logo-container">
-          <img src={require("../img/logoNWorld.png")} alt="logo" />
+          <Link to='/'>
+          <img src={logo} alt="logo" />
+          </Link>
         </div>
 
         <nav className={ isNavExpanded ? "expanded" : "" }>
           <ul className="nav-container">
             <li>
-              <a href="/">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="/">Game</a>
+              <NavLink to="/category/game">Games</NavLink>
             </li>
             <li>
-              <a href="/">Consoles</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
+              <NavLink to="/category/console">Consoles</NavLink>
             </li>
           </ul>
         </nav>
-
+        <Link to='/cart'>
         <CartWidget />
+        </Link>
       </div>
     </header>
   );

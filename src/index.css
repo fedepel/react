@@ -12,3 +12,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Color Theme Swatches in Hex */
+.NWorld-1-hex { color: #BF0413; }
+.NWorld-2-hex { color: #D95B66; }
+.NWorld-3-hex { color: #9FA6A5; }
+.NWorld-4-hex { color: #F2F2F2; }
+.NWorld-5-hex { color: #0D0D0D; }

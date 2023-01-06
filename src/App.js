@@ -1,13 +1,25 @@
-import React from 'react';
-import NavBar from './components/Header/NavBar.jsx';
-import BasicExample from './components/Main/itemListContainer.jsx';
+import Footer from './components/common/Footer.jsx';
+import NavBar from './components/common/NavBar.jsx';
+import ItemListContainer from './components/Main/itemListContainer.jsx';
+import ItemDetailContainer from './components/Main/itemDetailContainer'
+import Cart from './components/Main/cart'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
+import './components/Main/styles/item.css'
 
 export default function App() {
   return (
     <div>
-      <NavBar />
-      <BasicExample />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path="/category/:categoryName" element={<ItemListContainer />}/>
+          <Route path="/detail/:id" element={<ItemDetailContainer />}/>
+          <Route path="/cart" element={<Cart />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
